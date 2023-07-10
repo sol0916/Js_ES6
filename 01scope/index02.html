@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ul>
+        <li>목록1</li>
+        <li>목록2</li>
+        <li>목록3</li>
+        <li>목록4</li>
+    </ul>
+
+    <script>
+
+        var li = document.querySelectorAll('li');
+
+        //i = 0,1,2,3 .......
+        for(var i=0; i<li.length; i++) {
+            li[i].addEventListener('click', function() {
+                console.log(1);
+                //var 변수는 함수에서만 지역변수 취급이라 for문에서는 증가된 값(마지막 값)으로 찍혀서 나옴 
+                //let 변수는 증가된 값에서 지역 변수로 들어가기 때문에 ok
+                /* console.log(i); */ 
+            })
+        }
+
+    </script>
+
+
+</body>
+</html>

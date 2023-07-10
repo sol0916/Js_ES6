@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        const arr = ['a', 'b', 'c', 'd'];
+
+        /* let n1 = arr[0];
+        let n2 = arr[1]; */
+
+        const [a,b,c,d] = arr;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        console.log(d);
+
+
+        const [n1, n2, , n4] = arr;
+        console.log(n1); //a
+        console.log(n2); //b
+        console.log(n4); //d
+
+        const [k1, k2] = arr;
+        console.log(k1); //a
+        console.log(k2); //b
+
+        //arr을 전부 다 반환받음 (배열)
+        const[...x] = arr;
+        console.log(x);
+
+        const [x1, x2, ...x3] = arr;
+        console.log(x1); //a
+        console.log(x2); //b
+        console.log(x3); //[c,d] (전개 구문으로 받으면 배열 모양으로 출력)
+
+    </script>
+    
+</body>
+</html>

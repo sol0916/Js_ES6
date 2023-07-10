@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /* var a = function() {
+            console.log('a실행');
+        } */
+
+        let a = () => {
+            console.log('a실행');
+        }
+
+        a(); //a 함수 호출
+
+        //문법1 - 작성할 코드가 한줄이면 { }는 생략할 수 있습니다.
+        //        {}를 쓰지 않으면 기본값 undefind가 반환됩니다.
+        //        {}를 쓰지 않고 구문을 작성하면, 자동으로 리턴값이 됩니다.
+
+
+         let b = (x) => /* return */ console.log(x);
+
+        b(10);
+        /* console.log 자체가 리턴 값이 없기 때문에 기본 값인 undefind가 뜸 */
+        console.log(b(10)); //undefind
+
+
+        let c = (x) => x+10; //return x+10;
+        console.log(c(10)); //20
+
+        //위와 동일한 표현
+        let c1 = (x) => {
+            return x + 10;
+        } 
+
+
+        //////////////////////////////////////////////////////////////////////////////////////////
+
+        //문법2 - 매개변수가 1개라면 ()를 생략할 수 있습니다.
+
+        let d = x => x*10;
+        console.log(d(3));
+
+
+        let e = (x = 10, y = 20) => x * y; //default 매개변수
+        console.log(e());
+
+
+        ////////////////////////////////////////////////////////////////////////////////////////
+
+        //문법3 - 객체를 반환할때는 ()로 묶어줍니다.
+
+        /* let f = () => {
+            return {name : '홍길동'};
+        } */
+
+        /* 리턴값에 ()이 없으면 undefind */
+        let f = () => ({name: '홍길동'}); //객체 리턴
+        console.log(f());
+
+        
+
+    </script>
+
+</body>
+</html>
