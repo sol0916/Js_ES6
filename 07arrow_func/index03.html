@@ -28,10 +28,12 @@
         //화살표 문법으로 변경
         var result = window.setInterval(() => console.log('call'),1000);
         window.setTimeout(() => window.clearInterval(result),5000);
-        (() => console.log('즉시 실행 함수'))();
+        (() => {console.log('즉시 실행 함수')})();
 
 
     </script>
+
+
 
 
 </body>

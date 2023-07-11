@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //일반 HTML에서는 굳이 클래스를 생성할 필요는 없습니다 
+        //멤버변수 지칭할 때 키워드를 사용하지 않습니다
+
+        class Person {
+
+            //멤버변수
+            a = '홍길동';
+            b = 10;
+            c = {};
+
+            //생성자 - constructor로 통일, 1개만 선언이 가능함 
+            constructor(b) {
+                this.b = b;
+            }
+
+            //함수 - let 키워드 없이 생성 가능
+            func = () => {
+                console.log('함수 1번');
+            }
+
+            //function 키워드 없이 생성 가능
+            func2() {
+                console.log(this.a, this.b, this.c);
+            }
+
+
+        }
+
+        /* 클래스 사용 방법 */
+        /* let p = new Person(20); */ //b의 값을 주는 parameter
+        //객체 생성1
+        let p = new Person();
+        console.log(p.a);
+        console.log(p.b);
+        console.log(p.c);
+        p.func();
+        p.func2();
+
+
+        //객체 생성2
+        let p2 = new Person(30);
+
+
+
+    </script>
+
+</body>
+</html>
